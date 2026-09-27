@@ -150,6 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Skills summary animation
+    document.querySelectorAll('.summary-item').forEach((el, i) => {
+        el.classList.add('fade-up');
+        el.style.transitionDelay = `${i * 0.1}s`;
+        observer.observe(el);
+    });
+
     document.querySelectorAll('.about-p, .tag').forEach(el => { el.classList.add('fade-left'); observer.observe(el); });
     document.querySelectorAll('.contact-info, .contact-card').forEach(el => { el.classList.add('fade-left'); observer.observe(el); });
     document.querySelectorAll('.contact-form').forEach(el => { el.classList.add('fade-right'); observer.observe(el); });
