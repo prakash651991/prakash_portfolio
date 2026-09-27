@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash R | Data Analytics Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-brand">PRAKASH R</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Data Analytics Professional</div>
+            <h1 class="hero-title">PRAKASH R</h1>
+            <p class="hero-subtitle">Team Lead &amp; Senior Data Analyst</p>
+            <p class="hero-desc">12+ years transforming data into actionable insights. Leading analytics teams, building scalable ETL pipelines, and deploying AI-powered solutions.</p>
+            <div class="hero-buttons">
+                <a href="resume.pdf" download class="btn btn-primary" id="downloadResume">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i> Get In Touch
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">12+</span>
+                    <span class="stat-label">Years Exp</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Reports</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Team Led</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Man-hours Saved</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Senior Data Analytics professional with 12+ years of experience leading a 6-member analytics team and driving analytics solutions across financial services and e-commerce domains. Expertise in ETL pipeline architecture, dashboard development, and automated reporting using Looker, Power BI, Tableau, and Apache Superset.</p>
+                    <p>Proven track record of building 150+ business reports, optimizing SQL performance by 40%, and saving 50+ man-hours monthly through automation. Currently leading analytics initiatives from requirement gathering through production deployment, mentoring analysts, and collaborating with business stakeholders.</p>
+                    <div class="about-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Looker</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag">GCP</span>
+                        <span class="tag">BigQuery</span>
+                        <span class="tag">ETL/ELT</span>
+                        <span class="tag">AI/ML</span>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="card-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Location</strong>
+                            <p>Thiruvallur, Chennai, India</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>prakash651991@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+91-7395919224</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <i class="fas fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <p>linkedin.com/in/prakash-r-analytics</p>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <strong>GitHub</strong>
+                            <p>github.com/prakash651991</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Core <span class="highlight">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-category="analytics">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Analytics & BI</h3>
+                    <ul>
+                        <li>Looker</li><li>Power BI</li><li>Tableau</li>
+                        <li>Apache Superset</li><li>Metabase</li>
+                        <li>KPI Frameworks</li><li>Dashboard Development</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="engineering">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Engineering</h3>
+                    <ul>
+                        <li>SQL</li><li>Python</li><li>MySQL</li>
+                        <li>ETL/ELT</li><li>Data Pipelines</li>
+                        <li>Data Modeling</li><li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <ul>
+                        <li>Google Cloud Platform</li><li>BigQuery</li>
+                        <li>Linux</li><li>Docker</li>
+                        <li>Cloud-Based Analytics</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="automation">
+                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Orchestration</h3>
+                    <ul>
+                        <li>Airflow</li><li>Jenkins</li>
+                        <li>GitHub Workflows</li><li>CI/CD</li>
+                        <li>Automated Reporting</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="ai">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI & Advanced Analytics</h3>
+                    <ul>
+                        <li>AI/ML Exposure</li><li>NLP</li>
+                        <li>Scikit-learn</li><li>Predictive Analytics</li>
+                        <li>Sentence-Transformers</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Excel (Advanced, VBA)</li>
+                        <li>Streamlit</li><li>APIs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">Professional <span class="highlight">Experience</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>DVARA KGFS</h3>
+                            <span class="timeline-duration">2019 - Present (7 Years)</span>
+                        </div>
+                        <p class="timeline-role">Deputy Manager Analytics</p>
+                        <p class="timeline-location">Chennai, India</p>
+                        <ul class="timeline-bullets">
+                            <li><i class="fas fa-check-circle"></i> Led a 6-member analytics team, driving end-to-end delivery of business reporting solutions</li>
+                            <li><i class="fas fa-check-circle"></i> Deployed Apache Superset in production with RBAC and Docker for 150+ business reports</li>
+                            <li><i class="fas fa-check-circle"></i> Built scalable Python-based ETL pipelines and branch profitability analytics engine</li>
+                            <li><i class="fas fa-check-circle"></i> Automated Treasury Stock Statement system, saving 50+ man-hours/month</li>
+                            <li><i class="fas fa-check-circle"></i> Optimized SQL queries improving performance by 40%</li>
+                            <li><i class="fas fa-check-circle"></i> Developed automated job orchestration using Airflow, Jenkins, Docker, and GitHub</li>
+                            <li><i class="fas fa-check-circle"></i> Enabled branch managers through Wealth Manager Tracking Streamlit dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>CES LTD</h3>
+                            <span class="timeline-duration">Feb 2014 - Mar 2019 (5 Years)</span>
+                        </div>
+                        <p class="timeline-role">Senior Associate</p>
+                        <p class="timeline-location">Chennai, India</p>
+                        <ul class="timeline-bullets">
+                            <li><i class="fas fa-check-circle"></i> Managed backend database systems for e-commerce platform</li>
+                            <li><i class="fas fa-check-circle"></i> Developed Python scripts for bulk data ingestion and reporting pipelines</li>
+                            <li><i class="fas fa-check-circle"></i> Generated automated reports using Excel VBA, reducing manual effort</li>
+                            <li><i class="fas fa-check-circle"></i> Led database performance optimization efforts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #1a237e, #3949ab);">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Resume Shortlisting Engine</h3>
+                        <p class="project-tech">FastAPI, React, NLP, Sentence-Transformers, Scikit-learn</p>
+                        <p>AI-based resume screening system with JD matching using semantic similarity and hard-skill validation. Deployed offline AI model with FastAPI backend and React UI.</p>
+                        <a href="https://github.com/prakash651991/resume-ai-system.git" class="btn btn-small" target="_blank">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #00695c, #009688);">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Wealth Manager Tracking Dashboard</h3>
+                        <p class="project-tech">Streamlit, MySQL, MongoDB, Google Maps API</p>
+                        <p>Visualized travel routes and daily distance enabling branch managers to optimize travel plans through real-time analytics.</p>
+                        <a href="#" class="btn btn-small">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #e65100, #ff9800);">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Reporting Automation Framework</h3>
+                        <p class="project-tech">Airflow, Jenkins, Docker, Python, SQL</p>
+                        <p>Automated reporting framework producing 150+ business reports on daily, weekly, and monthly cycles. Eliminated manual bottlenecks saving 50+ man-hours/month.</p>
+                        <a href="#" class="btn btn-small">
+                            <i class="fas fa-external-link-alt"></i> Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get <span class="highlight">In Touch</span></h2>
+            <p class="contact-subtitle">Have a project in mind or want to discuss opportunities? Let's connect!</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p>prakash651991@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+91-7395919224</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Location</strong>
+                            <p>Thiruvallur, Chennai, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://linkedin.com/in/prakash-r-analytics" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/prakash651991" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="job">Job Opportunity</option>
+                            <option value="project">Project Discussion</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or inquiry..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Prakash R. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="resume.pdf" download><i class="fas fa-download"></i> Resume</a>
+                    <a href="https://github.com/prakash651991/prakash_portfolio" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/prakash-r-analytics" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
