@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.skill-card, .project-card, .timeline-card, .about-card').forEach((el, i) => {
+    document.querySelectorAll('.skill-card, .project-card, .timeline-card, .about-card, .jd-card, .match-item, .project-features').forEach((el, i) => {
         el.classList.add('fade-up');
         el.style.transitionDelay = `${i * 0.1}s`;
         observer.observe(el);
@@ -156,6 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transitionDelay = `${i * 0.1}s`;
         observer.observe(el);
     });
+
+    // Score circle animation
+    const scoreCircle = document.querySelector('.score-circle');
+    if (scoreCircle) { observer.observe(scoreCircle); scoreCircle.classList.add('fade-up'); }
 
     document.querySelectorAll('.about-p, .tag').forEach(el => { el.classList.add('fade-left'); observer.observe(el); });
     document.querySelectorAll('.contact-info, .contact-card').forEach(el => { el.classList.add('fade-left'); observer.observe(el); });
