@@ -6,114 +6,138 @@
     <title>Prakash R | Data Analytics Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-circle">
+                <div class="loader-inner"></div>
+            </div>
+            <p class="loader-text">PRAKASH R</p>
+        </div>
+    </div>
+
+    <canvas id="particles"></canvas>
+
     <nav id="navbar">
-        <div class="nav-brand">PRAKASH R</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">PRAKASH<span>.</span>R</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="resume.pdf" download class="btn-nav-primary" id="downloadNavBtn">
+                    <i class="fas fa-download"></i> Resume
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-grid-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">Data Analytics Professional</div>
-            <h1 class="hero-title">PRAKASH R</h1>
+            <div class="hero-badge-wrapper">
+                <span class="hero-badge"><i class="fas fa-bolt"></i> Data Analytics Professional</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">PRAKASH</span>
+                <span class="title-line accent">R</span>
+            </h1>
             <p class="hero-subtitle">Team Lead &amp; Senior Data Analyst</p>
-            <p class="hero-desc">12+ years transforming data into actionable insights. Leading analytics teams, building scalable ETL pipelines, and deploying AI-powered solutions.</p>
+            <p class="hero-desc">12+ years transforming raw data into strategic insights. Leading analytics teams, architecting scalable ETL pipelines, and deploying AI-powered solutions that drive business decisions.</p>
             <div class="hero-buttons">
-                <a href="resume.pdf" download class="btn btn-primary" id="downloadResume">
+                <a href="resume.pdf" download class="btn btn-primary btn-lg" id="downloadBtn">
                     <i class="fas fa-download"></i> Download Resume
                 </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-paper-plane"></i> Get In Touch
+                <a href="#contact" class="btn btn-outline btn-lg">
+                    <i class="fas fa-arrow-right"></i> Get In Touch
                 </a>
             </div>
             <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">12+</span>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="12">0</span>
                     <span class="stat-label">Years Exp</span>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">150+</span>
-                    <span class="stat-label">Reports</span>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="150">0</span>
+                    <span class="stat-label">Reports Built</span>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">6</span>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="6">0</span>
                     <span class="stat-label">Team Led</span>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">50+</span>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
                     <span class="stat-label">Man-hours Saved</span>
                 </div>
             </div>
         </div>
         <div class="hero-scroll">
-            <div class="scroll-indicator"></div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
         </div>
     </section>
 
     <section id="about" class="section about">
+        <div class="bg-blob blob-1"></div>
+        <div class="bg-blob blob-2"></div>
         <div class="container">
-            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="section-header">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Senior Data Analytics professional with 12+ years of experience leading a 6-member analytics team and driving analytics solutions across financial services and e-commerce domains. Expertise in ETL pipeline architecture, dashboard development, and automated reporting using Looker, Power BI, Tableau, and Apache Superset.</p>
-                    <p>Proven track record of building 150+ business reports, optimizing SQL performance by 40%, and saving 50+ man-hours monthly through automation. Currently leading analytics initiatives from requirement gathering through production deployment, mentoring analysts, and collaborating with business stakeholders.</p>
+                    <p class="about-p">Senior Data Analytics professional with <strong>12+ years</strong> of experience leading a <strong>6-member analytics team</strong> and driving analytics solutions across financial services and e-commerce domains. My expertise spans ETL pipeline architecture, dashboard development, and automated reporting using industry-leading tools including Looker, Power BI, Tableau, and Apache Superset.</p>
+                    <p class="about-p">I've built and optimized <strong>150+ business reports</strong>, improved SQL performance by <strong>40%</strong>, and automated reporting workflows saving <strong>50+ man-hours monthly</strong>. Currently leading analytics initiatives from requirement gathering through production deployment, mentoring analysts, and partnering with business stakeholders to convert data into actionable insights.</p>
+                    <p class="about-p">My portfolio includes an <strong>AI-powered resume screening engine</strong> built with NLP and Sentence-Transformers, a <strong>Wealth Manager Tracking Dashboard</strong> using real-time analytics, and a comprehensive <strong>Reporting Automation Framework</strong> that streamlined enterprise operations.</p>
                     <div class="about-tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Looker</span>
-                        <span class="tag">Power BI</span>
-                        <span class="tag">GCP</span>
-                        <span class="tag">BigQuery</span>
-                        <span class="tag">ETL/ELT</span>
-                        <span class="tag">AI/ML</span>
+                        <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Looker</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">GCP</span><span class="tag">BigQuery</span><span class="tag">ETL/ELT</span><span class="tag">Airflow</span><span class="tag">Docker</span><span class="tag">AI/ML</span><span class="tag">NLP</span>
                     </div>
                 </div>
                 <div class="about-card">
-                    <div class="card-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Location</strong>
-                            <p>Thiruvallur, Chennai, India</p>
+                    <div class="card-glass">
+                        <div class="about-info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-text"><strong>Location</strong><p>Thiruvallur, Chennai, India</p></div>
                         </div>
-                    </div>
-                    <div class="card-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <p>prakash651991@gmail.com</p>
+                        <div class="about-info-item">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="info-text"><strong>Email</strong><p>prakash651991@gmail.com</p></div>
                         </div>
-                    </div>
-                    <div class="card-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Phone</strong>
-                            <p>+91-7395919224</p>
+                        <div class="about-info-item">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-text"><strong>Phone</strong><p>+91-7395919224</p></div>
                         </div>
-                    </div>
-                    <div class="card-item">
-                        <i class="fas fa-linkedin"></i>
-                        <div>
-                            <strong>LinkedIn</strong>
-                            <p>linkedin.com/in/prakash-r-analytics</p>
+                        <div class="about-info-item">
+                            <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="info-text"><strong>Current Role</strong><p>Deputy Manager Analytics</p></div>
                         </div>
-                    </div>
-                    <div class="card-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <strong>GitHub</strong>
-                            <p>github.com/prakash651991</p>
+                        <div class="about-info-item">
+                            <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="info-text"><strong>Education</strong><p>B.E (Electrical & Electronics)</p></div>
+                        </div>
+                        <div class="about-info-item">
+                            <div class="info-icon"><i class="fas fa-link"></i></div>
+                            <div class="info-text">
+                                <strong>Connect</strong>
+                                <div class="social-links">
+                                    <a href="https://linkedin.com/in/prakash-r-analytics" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://github.com/prakash651991" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,60 +147,80 @@
 
     <section id="skills" class="section skills-section">
         <div class="container">
-            <h2 class="section-title">Core <span class="highlight">Skills</span></h2>
+            <div class="section-header">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">Core <span class="highlight">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
             <div class="skills-grid">
                 <div class="skill-card" data-category="analytics">
-                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="skill-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
                     <h3>Analytics & BI</h3>
+                    <p>Business intelligence, dashboard design, and visualization</p>
                     <ul>
                         <li>Looker</li><li>Power BI</li><li>Tableau</li>
                         <li>Apache Superset</li><li>Metabase</li>
-                        <li>KPI Frameworks</li><li>Dashboard Development</li>
+                        <li>KPI Frameworks</li><li>Executive Dashboards</li>
                     </ul>
+                    <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
                 </div>
                 <div class="skill-card" data-category="engineering">
+                    <div class="skill-glow"></div>
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>Data Engineering</h3>
+                    <p>Pipeline architecture, data modeling, and database design</p>
                     <ul>
                         <li>SQL</li><li>Python</li><li>MySQL</li>
                         <li>ETL/ELT</li><li>Data Pipelines</li>
                         <li>Data Modeling</li><li>MongoDB</li>
                     </ul>
+                    <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
                 </div>
                 <div class="skill-card" data-category="cloud">
+                    <div class="skill-glow"></div>
                     <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud & Infrastructure</h3>
+                    <h3>Cloud & Big Data</h3>
+                    <p>Scalable cloud infrastructure and big data processing</p>
                     <ul>
                         <li>Google Cloud Platform</li><li>BigQuery</li>
                         <li>Linux</li><li>Docker</li>
-                        <li>Cloud-Based Analytics</li>
                     </ul>
+                    <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
                 </div>
                 <div class="skill-card" data-category="automation">
-                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                    <div class="skill-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
                     <h3>Orchestration</h3>
+                    <p>Automated workflows, CI/CD, and job scheduling</p>
                     <ul>
                         <li>Airflow</li><li>Jenkins</li>
-                        <li>GitHub Workflows</li><li>CI/CD</li>
-                        <li>Automated Reporting</li>
+                        <li>GitHub Actions</li><li>CI/CD Pipelines</li>
                     </ul>
+                    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
                 </div>
                 <div class="skill-card" data-category="ai">
+                    <div class="skill-glow"></div>
                     <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h3>AI & Advanced Analytics</h3>
+                    <h3>AI & Advanced</h3>
+                    <p>Machine learning, NLP, and predictive analytics</p>
                     <ul>
                         <li>AI/ML Exposure</li><li>NLP</li>
-                        <li>Scikit-learn</li><li>Predictive Analytics</li>
-                        <li>Sentence-Transformers</li>
+                        <li>Scikit-learn</li><li>Sentence-Transformers</li>
+                        <li>Predictive Analytics</li>
                     </ul>
+                    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
                 </div>
                 <div class="skill-card" data-category="tools">
-                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <div class="skill-glow"></div>
+                    <div class="skill-icon"><i class="fas fa-wrench"></i></div>
                     <h3>Tools</h3>
+                    <p>Productivity tools and automation frameworks</p>
                     <ul>
                         <li>Excel (Advanced, VBA)</li>
                         <li>Streamlit</li><li>APIs</li>
                     </ul>
+                    <div class="skill-bar"><div class="skill-fill" style="width:94%"></div></div>
                 </div>
             </div>
         </div>
@@ -184,42 +228,48 @@
 
     <section id="experience" class="section experience">
         <div class="container">
-            <h2 class="section-title">Professional <span class="highlight">Experience</span></h2>
+            <div class="section-header">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">Professional <span class="highlight">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>DVARA KGFS</h3>
-                            <span class="timeline-duration">2019 - Present (7 Years)</span>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2019 - Present</div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-company">DVARA KGFS</div>
+                            <span class="timeline-badge">Current</span>
                         </div>
-                        <p class="timeline-role">Deputy Manager Analytics</p>
-                        <p class="timeline-location">Chennai, India</p>
+                        <h3 class="timeline-role">Deputy Manager Analytics</h3>
+                        <p class="timeline-location">Chennai, India &middot; 7 Years</p>
                         <ul class="timeline-bullets">
-                            <li><i class="fas fa-check-circle"></i> Led a 6-member analytics team, driving end-to-end delivery of business reporting solutions</li>
-                            <li><i class="fas fa-check-circle"></i> Deployed Apache Superset in production with RBAC and Docker for 150+ business reports</li>
-                            <li><i class="fas fa-check-circle"></i> Built scalable Python-based ETL pipelines and branch profitability analytics engine</li>
-                            <li><i class="fas fa-check-circle"></i> Automated Treasury Stock Statement system, saving 50+ man-hours/month</li>
-                            <li><i class="fas fa-check-circle"></i> Optimized SQL queries improving performance by 40%</li>
-                            <li><i class="fas fa-check-circle"></i> Developed automated job orchestration using Airflow, Jenkins, Docker, and GitHub</li>
-                            <li><i class="fas fa-check-circle"></i> Enabled branch managers through Wealth Manager Tracking Streamlit dashboard</li>
+                            <li><div class="bullet-dot"></div>Led a 6-member analytics team, driving end-to-end delivery of business reporting solutions and mentoring analysts on best practices</li>
+                            <li><div class="bullet-dot"></div>Deployed Apache Superset in production with RBAC and Docker-based containerization for 150+ business reports</li>
+                            <li><div class="bullet-dot"></div>Built scalable Python-based ETL pipelines for daily, weekly, and monthly data processing; designed branch profitability analytics engine</li>
+                            <li><div class="bullet-dot"></div>Automated Treasury Stock Statement system using Python and MySQL, saving 50+ man-hours/month</li>
+                            <li><div class="bullet-dot"></div>Optimized SQL queries improving performance by 40%, reducing query execution time significantly</li>
+                            <li><div class="bullet-dot"></div>Developed automated job orchestration using Airflow, Jenkins, Docker, and GitHub workflows; implemented CI/CD pipelines</li>
+                            <li><div class="bullet-dot"></div>Enabled branch managers through Wealth Manager Tracking Streamlit dashboard using MySQL, MongoDB, and Google Maps API</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>CES LTD</h3>
-                            <span class="timeline-duration">Feb 2014 - Mar 2019 (5 Years)</span>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2014 - Mar 2019</div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-company">CES LTD</div>
+                            <span class="timeline-badge past">Past</span>
                         </div>
-                        <p class="timeline-role">Senior Associate</p>
-                        <p class="timeline-location">Chennai, India</p>
+                        <h3 class="timeline-role">Senior Associate</h3>
+                        <p class="timeline-location">Chennai, India &middot; 5 Years</p>
                         <ul class="timeline-bullets">
-                            <li><i class="fas fa-check-circle"></i> Managed backend database systems for e-commerce platform</li>
-                            <li><i class="fas fa-check-circle"></i> Developed Python scripts for bulk data ingestion and reporting pipelines</li>
-                            <li><i class="fas fa-check-circle"></i> Generated automated reports using Excel VBA, reducing manual effort</li>
-                            <li><i class="fas fa-check-circle"></i> Led database performance optimization efforts</li>
+                            <li><div class="bullet-dot"></div>Managed backend database systems for e-commerce platform; developed Python scripts for bulk data ingestion</li>
+                            <li><div class="bullet-dot"></div>Created reporting pipelines for ecommerce metrics using SQL and Python</li>
+                            <li><div class="bullet-dot"></div>Generated automated reports using Excel VBA (Advanced Excel), significantly reducing manual effort</li>
+                            <li><div class="bullet-dot"></div>Led database performance optimization efforts improving query efficiency</li>
                         </ul>
                     </div>
                 </div>
@@ -229,13 +279,21 @@
 
     <section id="projects" class="section projects">
         <div class="container">
-            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+            <div class="section-header">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #1a237e, #3949ab);">
-                        <i class="fas fa-robot"></i>
+                    <div class="project-image" style="background: linear-gradient(135deg, #0d1458, #1a237e, #3949ab);">
+                        <div class="project-image-content">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-image-overlay"></div>
                     </div>
                     <div class="project-info">
+                        <div class="project-tag">AI / ML</div>
                         <h3>AI Resume Shortlisting Engine</h3>
                         <p class="project-tech">FastAPI, React, NLP, Sentence-Transformers, Scikit-learn</p>
                         <p>AI-based resume screening system with JD matching using semantic similarity and hard-skill validation. Deployed offline AI model with FastAPI backend and React UI.</p>
@@ -245,23 +303,31 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #00695c, #009688);">
-                        <i class="fas fa-map-marked-alt"></i>
+                    <div class="project-image" style="background: linear-gradient(135deg, #004d40, #00695c, #009688);">
+                        <div class="project-image-content">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="project-image-overlay"></div>
                     </div>
                     <div class="project-info">
+                        <div class="project-tag">Dashboard</div>
                         <h3>Wealth Manager Tracking Dashboard</h3>
                         <p class="project-tech">Streamlit, MySQL, MongoDB, Google Maps API</p>
-                        <p>Visualized travel routes and daily distance enabling branch managers to optimize travel plans through real-time analytics.</p>
+                        <p>Visualized travel routes and daily distance enabling branch managers to optimize travel plans through real-time analytics and geospatial visualization.</p>
                         <a href="#" class="btn btn-small">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #e65100, #ff9800);">
-                        <i class="fas fa-bolt"></i>
+                    <div class="project-image" style="background: linear-gradient(135deg, #bf360c, #e65100, #ff9800);">
+                        <div class="project-image-content">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="project-image-overlay"></div>
                     </div>
                     <div class="project-info">
+                        <div class="project-tag">Automation</div>
                         <h3>Reporting Automation Framework</h3>
                         <p class="project-tech">Airflow, Jenkins, Docker, Python, SQL</p>
                         <p>Automated reporting framework producing 150+ business reports on daily, weekly, and monthly cycles. Eliminated manual bottlenecks saving 50+ man-hours/month.</p>
@@ -275,45 +341,46 @@
     </section>
 
     <section id="contact" class="section contact">
+        <div class="bg-blob blob-3"></div>
         <div class="container">
-            <h2 class="section-title">Get <span class="highlight">In Touch</span></h2>
-            <p class="contact-subtitle">Have a project in mind or want to discuss opportunities? Let's connect!</p>
+            <div class="section-header">
+                <span class="section-tag">05</span>
+                <h2 class="section-title">Get <span class="highlight">In Touch</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="contact-subtitle">Have a project in mind or want to discuss opportunities? Let's connect and create something amazing together.</p>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <p>prakash651991@gmail.com</p>
+                    <div class="contact-card">
+                        <div class="contact-card-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div><strong>Email</strong><p>prakash651991@gmail.com</p></div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Phone</strong>
-                            <p>+91-7395919224</p>
+                        <div class="contact-card-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div><strong>Phone</strong><p>+91-7395919224</p></div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Location</strong>
-                            <p>Thiruvallur, Chennai, India</p>
+                        <div class="contact-card-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><strong>Location</strong><p>Thiruvallur, Chennai, India</p></div>
                         </div>
                     </div>
                     <div class="contact-social">
                         <a href="https://linkedin.com/in/prakash-r-analytics" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://github.com/prakash651991" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="resume.pdf" download class="social-link" aria-label="Resume"><i class="fas fa-file-pdf"></i></a>
                     </div>
                 </div>
-                <form id="contactForm" class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
@@ -329,8 +396,9 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or inquiry..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <i class="fas fa-paper-plane"></i> Send Message
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                        <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
                     </button>
                     <div id="formMessage" class="form-message"></div>
                 </form>
@@ -341,7 +409,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 Prakash R. All rights reserved.</p>
+                <p>&copy; 2026 Prakash R. Crafted with <i class="fas fa-heart"></i></p>
                 <div class="footer-links">
                     <a href="resume.pdf" download><i class="fas fa-download"></i> Resume</a>
                     <a href="https://github.com/prakash651991/prakash_portfolio" target="_blank"><i class="fab fa-github"></i> GitHub</a>
